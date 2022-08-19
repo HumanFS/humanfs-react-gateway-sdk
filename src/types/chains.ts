@@ -74,7 +74,7 @@ export type ChainInfo = {
   l2: boolean
   description: string
   rpcUri: RpcUri
-  safeAppsRpcUri: RpcUri
+  safeDataSourcesRpcUri: RpcUri
   publicRpcUri: RpcUri
   blockExplorerUriTemplate: BlockExplorerUriTemplate
   nativeCurrency: NativeCurrency

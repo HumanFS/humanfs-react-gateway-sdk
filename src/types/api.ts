@@ -17,7 +17,7 @@ import {
 } from './transactions'
 import { SafeInfo } from './safe-info'
 import { ChainListResponse, ChainInfo } from './chains'
-import { SafeAppsResponse } from './safe-apps'
+import { SafeDataSourcesResponse } from './safe-apps'
 import { DecodedDataRequest, DecodedDataResponse } from './decoded-data'
 import { MasterCopyReponse } from './master-copies'
 
@@ -509,7 +509,7 @@ export interface operations {
     }
     responses: {
       200: {
-        schema: SafeAppsResponse
+        schema: SafeDataSourcesResponse
       }
     }
   }

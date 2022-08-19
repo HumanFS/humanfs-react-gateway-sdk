@@ -9,7 +9,7 @@ A TypeScript SDK for the [Safe Client Gateway](https://github.com/safe-global/sa
 ## Usage policy
 
 NB: Safe Client Gateway isn't meant for public use.
-Please _do not_ use this SDK if you're building, e.g., a Safe App.
+Please _do not_ use this SDK if you're building, e.g., a Safe DataSource.
 
 ## Using the SDK
 

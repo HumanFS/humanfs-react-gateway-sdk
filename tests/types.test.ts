@@ -1,5 +1,5 @@
 import {
-  SafeAppData,
+  SafeDataSourceData,
   MultisigTransactionRequest,
   BlockExplorerUriTemplate,
   FiatCurrencies,
@@ -10,7 +10,7 @@ import {
 describe('Types are exported from index correctly', () => {
   it('Random type check', () => {
     const val = {} as unknown as
-      | SafeAppData
+      | SafeDataSourceData
       | MultisigTransactionRequest
       | BlockExplorerUriTemplate
       | FiatCurrencies
@@ -31,13 +31,13 @@ describe('Types are exported from index correctly', () => {
 
     const exportedTypeNames = fs
       .readdirSync(typesDir)
-      .filter((file) => file !== 'api.ts')
-      .flatMap((file) => {
+      .filter((file: string) => file !== 'api.ts')
+      .flatMap((file: any) => {
         /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
         const { default: _ = null, ...rest } = require(`../src/types/${file}`)
         return Object.keys(rest)
       })
 
-    exportedTypeNames.every((type) => expect(exportedNames.includes(type)).toBe(true))
+    exportedTypeNames.every((type: string) => expect(exportedNames.includes(type)).toBe(true))
   })
 })

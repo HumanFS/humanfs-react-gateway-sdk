@@ -221,7 +221,7 @@ export type TransactionSummary = {
   txStatus: TransactionStatus
   txInfo: TransactionInfo
   executionInfo?: ExecutionInfo
-  safeAppInfo?: SafeAppInfo
+  safeDataSourceInfo?: SafeDataSourceInfo
 }
 
 export type Transaction = {
@@ -297,7 +297,7 @@ export type MultisigTransactionRequest = {
 }
 
 /* Transaction details types */
-export type SafeAppInfo = {
+export type SafeDataSourceInfo = {
   name: string
   url: string
   logoUri: string
@@ -353,7 +353,7 @@ export type TransactionDetails = {
   txData?: TransactionData
   detailedExecutionInfo?: DetailedExecutionInfo
   txHash?: string
-  safeAppInfo?: SafeAppInfo
+  safeDataSourceInfo?: SafeDataSourceInfo
 }
 
 /* Transaction details types end */

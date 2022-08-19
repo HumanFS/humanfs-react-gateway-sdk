@@ -27,7 +27,7 @@ describe('utils', () => {
 
     it('should return an empty string for empty query', () => {
       expect(stringifyQuery()).toBe('')
-      expect(stringifyQuery(null)).toBe('')
+      expect(stringifyQuery(undefined)).toBe('')
       expect(stringifyQuery({})).toBe('')
     })
   })

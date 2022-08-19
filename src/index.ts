@@ -17,13 +17,13 @@ import {
 } from './types/common'
 import { SafeInfo } from './types/safe-info'
 import { ChainListResponse, ChainInfo } from './types/chains'
-import { SafeAppsResponse } from './types/safe-apps'
+import { SafeDataSourcesResponse } from './types/safe-data-sources'
 import { MasterCopyReponse } from './types/master-copies'
 import { DecodedDataResponse } from './types/decoded-data'
 import { DEFAULT_BASE_URL } from './config'
 
 export * from './types/safe-info'
-export * from './types/safe-apps'
+export * from './types/safe-data-sources'
 export * from './types/transactions'
 export * from './types/chains'
 export * from './types/common'
@@ -253,12 +253,12 @@ export function getChainConfig(chainId: string): Promise<ChainInfo> {
 }
 
 /**
- * Returns Safe Apps List
+ * Returns Safe DataSources List
  */
-export function getSafeApps(
+export function getSafeDataSources(
   chainId: string,
   query: operations['safe_apps_read']['parameters']['query'] = {},
-): Promise<SafeAppsResponse> {
+): Promise<SafeDataSourcesResponse> {
   return callEndpoint(baseUrl, '/v1/chains/{chainId}/safe-apps', {
     path: { chainId: chainId },
     query,
