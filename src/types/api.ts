@@ -17,7 +17,7 @@ import {
 } from './transactions'
 import { SafeInfo } from './safe-info'
 import { ChainListResponse, ChainInfo } from './chains'
-import { SafeDataSourcesResponse } from './safe-apps'
+import { SafeDataSourcesResponse } from './safe-data-sources'
 import { DecodedDataRequest, DecodedDataResponse } from './decoded-data'
 import { MasterCopyReponse } from './master-copies'
 
@@ -170,8 +170,8 @@ export interface paths {
       }
     }
   }
-  '/v1/chains/{chainId}/safe-apps': {
-    get: operations['safe_apps_read']
+  '/api/v1/connectors/list': {
+    get: operations['safe_data_sources_read']
     parameters: {
       path: {
         chainId: string
@@ -497,11 +497,11 @@ export interface operations {
       }
     }
   }
-  safe_apps_read: {
+  safe_data_sources_read: {
     parameters: {
       path: {
         /** A unique value identifying this chain. */
-        chainId: string
+        //chainId: string
       }
       query?: {
         client_url?: string

@@ -15,21 +15,19 @@ describe('getSafeDataSources tests', () => {
     expect(Array.isArray(safeDataSourcesList)).toBe(true)
 
     // safe app WalletConnect should be present
-    const walletConnectSafeDataSource = safeDataSourcesList.find(
-      (safeDataSource: { name: string }) => safeDataSource.name === 'WalletConnect',
+    const githubSafeDataSource = safeDataSourcesList.find(
+      (safeDataSource: { name: string }) => safeDataSource.name === 'github',
     )
-    expect(walletConnectSafeDataSource).toBeDefined()
+    expect(githubSafeDataSource).toBeDefined()
 
     // safe app Transaction Builder should be present
-    const transactionBuilder = safeDataSourcesList.find(
-      (safeDataSource: { name: string }) => safeDataSource.name === 'Transaction Builder',
-    )
-    expect(transactionBuilder).toBeDefined()
+    const google = safeDataSourcesList.find((safeDataSource: { name: string }) => safeDataSource.name === 'googleplus')
+    expect(google).toBeDefined()
 
     // safe app Drain Safe should be present
-    const drainSafeDataSource = safeDataSourcesList.find(
-      (safeDataSource: { name: string }) => safeDataSource.name === 'Drain Account',
+    const quantimodo = safeDataSourcesList.find(
+      (safeDataSource: { name: string }) => safeDataSource.name === 'quantimodo',
     )
-    expect(drainSafeDataSource).toBeDefined()
+    expect(quantimodo).toBeDefined()
   })
 })

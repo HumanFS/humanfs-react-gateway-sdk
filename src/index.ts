@@ -257,9 +257,9 @@ export function getChainConfig(chainId: string): Promise<ChainInfo> {
  */
 export function getSafeDataSources(
   chainId: string,
-  query: operations['safe_apps_read']['parameters']['query'] = {},
+  query: operations['safe_data_sources_read']['parameters']['query'] = {},
 ): Promise<SafeDataSourcesResponse> {
-  return callEndpoint(baseUrl, '/v1/chains/{chainId}/safe-apps', {
+  return callEndpoint(baseUrl, '/api/v1/connectors/list', {
     path: { chainId: chainId },
     query,
   })

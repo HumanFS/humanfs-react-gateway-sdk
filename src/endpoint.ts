@@ -12,7 +12,7 @@ interface Params {
 export function callEndpoint<T extends keyof paths>(
   baseUrl: string,
   path: T,
-  parameters?: paths[T]['get']['parameters'],
+  parameters?: paths[T]['get']['parameters'] | any,
   rawUrl?: string,
 ): Promise<paths[T]['get']['responses'][200]['schema']> {
   if (rawUrl) {

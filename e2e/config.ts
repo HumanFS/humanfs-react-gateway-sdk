@@ -1,5 +1,5 @@
 const config = {
-  baseUrl: 'https://safe-client.staging.gnosisdev.com',
+  baseUrl: 'https://app.quantimo.do',
 }
 
 export default config
